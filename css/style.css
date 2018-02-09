@@ -1,0 +1,125 @@
+*, 
+*:after,
+*:before {box-sizing: border-box;
+
+}
+
+body {
+	margin: 0;
+	background: #dacce5;
+	color: #6d5384;
+	font: 13px/2.3 'Roboto', sans-serif;
+}
+
+.visual {
+	height: 400px;
+	background: url('../images/bg-visual.png');
+}
+
+.header {
+	padding: 20 px 0;
+}
+
+.header: after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.logo {
+	float: left;
+}
+
+.nav {
+	float: right;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+} 
+
+.nav > ul > li {
+	float: left;
+	margin: 0 0 0 10px;
+	position: relative;
+}
+
+.nav li a {
+	color: #fff;
+	display: block;
+	width: 140px;
+	line-height: 35px;
+	border: 1px solid #9884aa;
+	padding: 10px 0;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 4px;
+	position: relative;
+	transition: all 1s ease;
+}
+
+.nav li a:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 8px 0 8px;
+	border-color: #f7df59 transparent transparent transparent;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%); 
+}
+
+.nav li a:hover {
+	background: #f7df59;
+	border-color: #f7df59;
+	box-shadow: 0 1px 3px 1px #4c2f65;
+
+}
+
+.nav li a:hover:after {
+	opacity: 1;
+}
+
+.nav li ul {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	opacity: 0;
+	transform: scaleY(0);
+	transform-origin: 0 0;
+	transition: all 0.3s ease;
+} 
+
+.nav li:hover ul {
+	opacity: 1;
+	transform: scaleY(1);
+}
+
+/*img {
+	border: 0;
+}
+
+a {
+	color: #6d5384; 
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}*/
+
+.main {
+	background: url('../images/bg-main.png');
+}
